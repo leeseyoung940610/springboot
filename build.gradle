@@ -33,6 +33,9 @@ dependencies {
 	testImplementation 'io.projectreactor:reactor-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 }
+bootJar {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
 
 tasks.named('bootBuildImage') {
 	builder = 'paketobuildpacks/builder-jammy-base:latest'
